@@ -35,6 +35,10 @@
     justify-content: space-between;
   }
 
+  .w-full {
+    width: 100%;
+  }
+
   .font-size-sm {
     font-size: 14px;
   }
@@ -56,9 +60,13 @@
     align-items: center;
   }
 
+  .m-auto {
+    margin: auto;
+  }
+
   button {
     width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0.75rem;
 
     // Gradient
     background-image: linear-gradient(to right, var(--letter-color), var(--main-board-color));
