@@ -1,0 +1,22 @@
+/** Login Styles */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mainRow {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.textColor {
+  color: var(--letter-color) !important;
+}
+
+.alternativeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

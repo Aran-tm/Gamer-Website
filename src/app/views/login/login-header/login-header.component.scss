@@ -1,0 +1,24 @@
+/** Login Header Styles */
+.mainRow {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mainHeader,
+.secondaryHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainHeader span {
+  text-align: center;
+  color: white;
+  font-size: 28px;
+}
+
+.secondaryHeader span {
+  text-align: center;
+  color: #9ca3af;
+}
