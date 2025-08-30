@@ -154,3 +154,9 @@ body {
 .p-component {
   font-family: 'Roboto', sans-serif;
 }
+
+@media screen and (min-width: 1024px) {
+  html {
+    padding: 40px !important;
+  }
+}

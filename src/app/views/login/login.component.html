@@ -1,27 +1,29 @@
-<!-- Task Component -->
-<div class="mainContainer m-auto">
-  <!-- First Row -->
-  <app-login-header />
+<div class="loginContainer">
+  <!-- Login Component -->
+  <div class="mainContainer m-auto">
+    <!-- First Row -->
+    <app-login-header />
 
-  <!-- Second Row -->
-  <div class="alternativeContainer">
-    <app-email-password />    
+    <!-- Second Row -->
+    <div class="alternativeContainer">
+      <app-email-password />
 
-    <!-- Forgot Password -->
-    <app-forgot-password />
+      <!-- Forgot Password -->
+      <app-forgot-password />
 
-    <!-- Forgot Password -->
-    <div class="justify-between">
-      <button>Login</button>
+      <!-- Forgot Password -->
+      <div class="justify-between">
+        <button>Login</button>
+      </div>
+
+      <!-- Or continue with -->
+      <app-continue-with />
+
+      <!-- Google and Facebook Buttons -->
+      <app-login-buttons />
+
+      <!-- Create Account -->
+      <app-have-an-account />
     </div>
-
-    <!-- Or continue with -->
-    <app-continue-with />
-
-    <!-- Google and Facebook Buttons -->
-    <app-login-buttons />
-
-    <!-- Create Account -->
-    <app-have-an-account />
   </div>
 </div>
