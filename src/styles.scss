@@ -155,6 +155,62 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+// making beatiful transitions
+::view-transition-old(root) {
+  animation: exit 1s ease-out 0s 0.25 normal forwards;
+}
+
+::view-transition-new(root) {
+  animation: enter 0.7s ease 0s 1 normal forwards;
+}
+
+// transitions between routes
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes exit {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+// scrollbar size
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+// scrollbar bg
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+// scrollbar radius and bg
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #e69c20;
+}
+
+// scrollbar thin on hover
+::-webkit-scrollbar-thumb:hover {
+  background: #e69c20;
+}
+
 @media screen and (min-width: 1024px) {
   html {
     padding: 40px !important;
