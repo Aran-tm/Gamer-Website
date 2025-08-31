@@ -248,6 +248,12 @@
       transform: translateY(-10px) rotate(calc(var(--rotation, 0deg) + 2deg));
     }
   }
+
+  @media screen and (min-width: 375px) {
+    button {
+      font-size: 14px !important;
+    }
+  }
 }
 
 /* Custom Classes */
