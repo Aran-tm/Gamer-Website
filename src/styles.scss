@@ -6,6 +6,10 @@
   --letter-color: #7e3ce5;
   --main-board-color: #fe8944;
 
+  --curve-color-1: #7b2ff7;
+  --curve-color-2: #5a189a;
+  --curve-color-3: #3c096c;
+
   --light-primary-color: #fff;
   --light-secondary-color: #f0f2f4;
   --light-tertiray-color: #9ca3af;
@@ -91,13 +95,13 @@
   }
 
   .streaming-card {
-      background: var(--card-bg);
-      border-radius: 16px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-      border: 1px solid rgb(57 57 57 / 10%);
-      max-width: 400px;
-      transition: all 0.3s ease;
-    }
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(57 57 57 / 10%);
+    max-width: 400px;
+    transition: all 0.3s ease;
+  }
 
   button {
     width: 100%;
@@ -147,6 +151,37 @@
       outline-offset: 2px;
     }
   }
+
+  .auth-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    button {
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-signin {
+      color: white;
+      background: var(--secondary-color);
+      border: 1px solid #4f4f4f;
+      border-radius: 20px;
+    }
+
+    .btn-signup {
+      color: white;
+      background: var(--secondary-color);
+      border: 1px solid #4f4f4f;
+      border-radius: 20px;
+    }
+  }
 }
 
 /* Custom Classes */
@@ -170,7 +205,7 @@
 }
 .light-tertiray-color {
   background-color: var(--light-tertiray-color) !important;
-} 
+}
 
 .textColor {
   color: var(--letter-color) !important;

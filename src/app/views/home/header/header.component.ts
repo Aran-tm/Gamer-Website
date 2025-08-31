@@ -2,10 +2,11 @@ import { IMenuOptions } from '@core/interfaces/menu-options.interface';
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { Router } from '@angular/router';
+import { SignInButtonsComponent } from "../sign-in-buttons/sign-in-buttons.component";
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule],
+  imports: [CommonModule, SignInButtonsComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

@@ -16,3 +16,68 @@
   transition: width 0.3s ease;
   width: 100%;
 }
+
+.curved-text-container {
+  position: relative;
+  display: inline-block;
+  padding: 40px 40px;
+  z-index: 1;
+}
+
+.curved-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 140%;
+  z-index: -1;
+}
+
+.curve {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: float 6s ease-in-out infinite;
+}
+
+.curve-1 {
+  width: 80%;
+  height: 60px;
+  background-color: transparent;
+  border: 1px solid var(--curve-color-1);
+  top: 20%;
+  animation-delay: 0s;
+  transform: rotate(-5deg);
+}
+
+.curve-2 {
+  width: 90%;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid var(--curve-color-2);
+  top: 50%;
+  left: 10%;
+  animation-delay: 2s;
+  transform: rotate(2deg);
+}
+
+.curve-3 {
+  width: 90%;
+  height: 60px;
+  background-color: transparent;
+  border: 1px solid var(--curve-color-3);
+  top: 80%;
+  animation-delay: 4s;
+  transform: rotate(-3deg);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--rotation, 0deg));
+  }
+  50% {
+    transform: translateY(-10px) rotate(calc(var(--rotation, 0deg) + 2deg));
+  }
+}
