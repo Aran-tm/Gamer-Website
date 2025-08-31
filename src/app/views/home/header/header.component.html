@@ -1,0 +1,37 @@
+<div class="headerContainer" [class.menuOpened]="isMenuOpened()">
+  <div class="header-content">
+    <span>Gamor</span>
+
+    <div class="menu-icon" (click)="openMenu()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
+        />
+      </svg>
+    </div>
+  </div>
+  
+  <!-- Additional content to be displayed when the menu is open -->
+  @if (isMenuOpened()) {
+    <div class="menu-content">
+      <a href="#">Home</a>
+      <a href="#">Streams</a>
+      <a href="#">Party</a>
+      <a href="#">Premium</a>
+      
+      <!-- Sign In / Sign Up Buttons -->
+      <div class="auth-buttons">
+        <button class="btn-signin">Sign In</button>
+        <button class="btn-signup">Create account</button>
+      </div>
+    </div>
+  }
+</div>

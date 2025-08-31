@@ -1,39 +1,21 @@
+import { HeaderComponent } from './header/header.component';
 import { Router } from '@angular/router';
-import { Component, inject, Inject, PLATFORM_ID, OnInit } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
   router = inject(Router);
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    
-    if (isPlatformBrowser(this.platformId)) {
-      this.showAlert();
-    }
-  }
+  ngOnInit(): void {}
 
   redirectToHome(): void {
     this.router.navigateByUrl('/');
-  }
-
-  async showAlert(): Promise<void> {
-    // Dynamic import to avoid SSR issues
-    const Swal = await import('sweetalert2');
-
-    Swal.default.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'User authenticated successfully.',
-      showConfirmButton: false,
-      timer: 1500,
-    });
   }
 }

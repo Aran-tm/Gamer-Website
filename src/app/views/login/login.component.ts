@@ -26,6 +26,6 @@ export class LoginComponent {
   constructor() {}
 
   redirectToLogin(): void {
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('/home')
   }
 }
