@@ -4,6 +4,7 @@
 
   &.menuOpened {
     background-color: rgba(44, 62, 80, 0.9);
+    z-index: 999999;
     transition: all 0.3s ease;
     padding: 30px;
     position: fixed;
@@ -12,6 +13,7 @@
     width: 100%;
     flex-direction: column;
     box-sizing: border-box;
+    backdrop-filter: blur(2px);
 
     .menu-icon svg {
       transform: rotate(90deg);

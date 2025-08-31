@@ -51,6 +51,14 @@
     font-size: 18px;
   }
 
+  .font-size-xl {
+    font-size: 24px;
+  }
+
+  .font-size-xxl {
+    font-size: 28px;
+  }
+
   .text-white {
     color: white;
   }
@@ -63,6 +71,33 @@
   .m-auto {
     margin: auto;
   }
+
+  .py {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .px {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .mt {
+    margin-top: 40px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .streaming-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgb(57 57 57 / 10%);
+      max-width: 400px;
+      transition: all 0.3s ease;
+    }
 
   button {
     width: 100%;
@@ -114,7 +149,7 @@
   }
 }
 
-/* Clases personalizadas */
+/* Custom Classes */
 .primary-color {
   background-color: var(--primary-color) !important;
 }
@@ -135,14 +170,13 @@
 }
 .light-tertiray-color {
   background-color: var(--light-tertiray-color) !important;
-} // Error corregido
+} 
 
-// Agrega esta clase (no existía en tu código)
 .textColor {
   color: var(--letter-color) !important;
 }
 
-// Estilos generales
+// General Styles
 * {
   font-family: 'Roboto', sans-serif;
 }
