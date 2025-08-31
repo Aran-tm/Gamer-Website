@@ -1,6 +1,8 @@
 <div class="headerContainer" [class.menuOpened]="isMenuOpened()">
   <div class="header-content">
-    <span>Gamor</span>
+
+    <!-- Logotype -->
+    <img style="width: 24px; height: 36px" src="/assets/images/logo.png" />
 
     <div class="menu-icon" (click)="openMenu()">
       <svg
@@ -24,7 +26,7 @@
   <div class="menu-content">
 
     @for (option of menuOptions; track option.id) {
-      <a href="#" class="flexRow">
+      <a href="/home" class="flexRow">
         <img style="width: 24px; height: 24px;" [src]="option.image" />
         <div class="align-center">
           <span>{{ option.name }}</span>
@@ -34,8 +36,8 @@
 
     <!-- Sign In / Sign Up Buttons -->
     <div class="auth-buttons">
-      <button class="btn-signin">Sign In</button>
-      <button class="btn-signup">Create account</button>
+      <button class="btn-signin" (click)="goToLogin()">Sign In</button>
+      <button class="btn-signup" (click)="goToLogin()">Create account</button>
     </div>
   </div>
   }
