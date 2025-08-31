@@ -18,20 +18,25 @@
       </svg>
     </div>
   </div>
-  
+
   <!-- Additional content to be displayed when the menu is open -->
   @if (isMenuOpened()) {
-    <div class="menu-content">
-      <a href="#">Home</a>
-      <a href="#">Streams</a>
-      <a href="#">Party</a>
-      <a href="#">Premium</a>
-      
-      <!-- Sign In / Sign Up Buttons -->
-      <div class="auth-buttons">
-        <button class="btn-signin">Sign In</button>
-        <button class="btn-signup">Create account</button>
-      </div>
+  <div class="menu-content">
+
+    @for (option of menuOptions; track option.id) {
+      <a href="#" class="flexRow">
+        <img style="width: 24px; height: 24px;" [src]="option.image" />
+        <div class="align-center">
+          <span>{{ option.name }}</span>
+        </div>
+      </a>
+    }
+
+    <!-- Sign In / Sign Up Buttons -->
+    <div class="auth-buttons">
+      <button class="btn-signin">Sign In</button>
+      <button class="btn-signup">Create account</button>
     </div>
+  </div>
   }
 </div>

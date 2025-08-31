@@ -1,11 +1,11 @@
 .headerContainer {
-  color: white;  
-  
+  color: white;
+
   &.menuOpened {
     background-color: rgba(44, 62, 80, 0.9);
     transition: all 0.3s ease;
     padding: 16px;
-    
+
     .menu-icon svg {
       transform: rotate(90deg);
     }
@@ -26,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   svg {
     width: 24px;
     height: 24px;
@@ -39,14 +39,14 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  
+
   a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     padding: 8px 0;
     transition: color 0.2s ease;
-    
+
     &:hover {
       color: #3498db;
     }
@@ -60,7 +60,7 @@
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  
+
   button {
     border-radius: 6px;
     font-weight: 600;
@@ -68,12 +68,18 @@
     cursor: pointer;
     transition: all 0.2s ease;
   }
-  
+
   .btn-signin {
     color: white;
+    background: var(--secondary-color);
+    border: 1px solid #4f4f4f;
+    border-radius: 20px;
   }
-  
+
   .btn-signup {
     color: white;
+    background: var(--secondary-color);
+    border: 1px solid #4f4f4f;
+    border-radius: 20px;
   }
 }
