@@ -11,6 +11,13 @@
   color: #737373 !important;
 }
 
+@media screen and (min-width: 490px) and (max-width: 1024px) {
+  .cardContainer {
+    margin: auto; 
+    width: 100% !important;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .outlerContainer {
     display: grid;
