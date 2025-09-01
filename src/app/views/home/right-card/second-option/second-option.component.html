@@ -44,7 +44,7 @@
       @for (user of users; track user.id) {
       <div class="flexRow" style="gap: 10px; justify-content: space-between">
         <div class="flexRow" style="gap: 10px">
-          <span class="blackBall">
+          <span [ngClass]="themeService.isDarkMode() ? 'blackBall' : 'lightBall'">
             {{ user.id }}
           </span>
           <span class="text-white align-center">{{ user.name }}</span>
@@ -52,19 +52,21 @@
         </div>
 
         <button
-          style="
-            width: 30px !important;
-            height: 30px !important;
-            border-radius: 4px !important;
-            background: #404145;
-          "
+          style="width: 30px !important; height: 30px !important; border-radius: 4px !important"
+          [ngStyle]="{
+            background: themeService.isDarkMode() ? '#404145' : '#dadada'
+          }"
         >
+          @if(themeService.isDarkMode()) {
           <img src="/assets/images/plus.png" alt="" />
+          } @else {
+          <img src="/assets/images/sum-nobg.png" alt="" style="position: absolute; top: 0; left: 0; width: 30px; height: 30px;" />
+          }
         </button>
       </div>
       }
 
-      <button class="searchNow">Search Now</button>
+      <button [ngClass]="themeService.isDarkMode() ? 'searchNow' : 'searchNowLighter'">Search Now</button>
     </div>
   </div>
 </div>

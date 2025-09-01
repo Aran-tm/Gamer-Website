@@ -1,5 +1,5 @@
 <div class="flexRow">
-  <button style="background: var(--secondary-color)">
+  <button [style]="themeService.isDarkMode() ? 'background: var(--secondary-color);' : 'background: var(--secondary-color); border: 1px solid black !important;'">
     <div class="flexRow-sm">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@
     </div>
   </button>
 
-  <button style="background: var(--secondary-color)">
+  <button [style]="themeService.isDarkMode() ? 'background: var(--secondary-color);' : 'background: var(--secondary-color); border: 1px solid black !important;'">
     <div class="flexRow-sm">
       <svg
         xmlns="http://www.w3.org/2000/svg"

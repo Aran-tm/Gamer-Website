@@ -1,3 +1,4 @@
+import { ThemeService } from '@core/services/theme-toggle.service';
 import { IMenuOptions } from '@core/interfaces/menu-options.interface';
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from "@angular/common";
@@ -13,6 +14,7 @@ import { SignInButtonsComponent } from "../sign-in-buttons/sign-in-buttons.compo
 export class HeaderComponent {
   isMenuOpened = signal<boolean>(false);
   router = inject(Router);
+  themeService = inject(ThemeService);
   menuOptions: IMenuOptions[] = [
     {
       id: 1,

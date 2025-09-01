@@ -40,16 +40,11 @@
       @for (option of menuOptions; track option.id) {
       <a href="/home" class="flexRow">
         <div class="align-center">
-          <span>{{ option.name }}</span>
+          <span [ngClass]="themeService.isDarkMode() ? 'text-white' : 'text-dark'">{{ option.name }}</span>
         </div>
       </a>
       }
-    </div>
-
-    <!-- Main Image -->
-    <div class="align-center">
-      <img class="gtaImage" src="/assets/images/logo.png" />
-    </div>
+    </div>    
 
     <div class="flexRow">
       <app-sign-in-buttons />

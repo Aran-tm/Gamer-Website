@@ -67,6 +67,18 @@
     color: white;
   }
 
+  .text-white:hover {
+    color: var(--main-board-color);
+  }
+
+  .text-dark {
+    color: black;
+  }
+
+  .text-dark:hover {
+    color: var(--letter-color);
+  }
+
   .align-center {
     display: flex;
     align-items: center;
@@ -261,6 +273,53 @@
       height: 100%;
       padding: 40px !important;
     }
+  }
+}
+
+// Variables para modo claro
+.light-theme {
+  --primary-color: #ffffff;
+  --secondary-color: #f0f2f4;
+  --card-bg: #ffffff;
+  --text-color: #1a2028;
+  --text-secondary: #6b7280;
+  --light-primary-color: #1a2028;
+  --light-secondary-color: #2a2c30;
+  --light-tertiray-color: #4b5563;
+  // ... otras variables para modo claro
+  
+  // Cambiar colores de los botones si es necesario
+  button {
+    background-image: linear-gradient(to right, #8b5cf6, #fb7185);
+    color: #1a2028;
+  }
+  
+  .auth-buttons {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    
+    .btn-signin, .btn-signup {
+      background: #f0f2f4;
+      color: #1a2028;
+      border: 1px solid #d1d5db;
+    }
+  }
+  
+  // Asegurar que el texto sea visible en modo claro
+  .text-white {
+    color: var(--text-color) !important;
+  }
+  
+  .text-secondary {
+    color: var(--text-secondary) !important;
+  }
+  
+  // Cambiar colores de scrollbar para modo claro
+  ::-webkit-scrollbar-track {
+    background: #f0f2f4;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #d1d5db;
   }
 }
 

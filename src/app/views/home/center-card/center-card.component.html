@@ -1,13 +1,21 @@
 <div
   class="py px streaming-card text-center"
-  style="
-    background: var(--main-board-color);
-    border-radius: 0px;
-  "
+  style="border-radius: 0px"
+  [ngStyle]="{
+    background: themeService.isDarkMode() ? 'var(--main-board-color)' : 'var(--letter-color)'
+  }"
 >
   <div class="displayContainer" style="gap: 0px">
-    <label class="text-white font-size-xxl" style="line-height: 1.5"> Fornite New Season </label>
-    <label class="text-white font-size-lg" style="line-height: 1.5; color: #e8732e !important">
+    <label class="text-white font-size-xxl forniteStyle" style="line-height: 1.5">
+      Fornite New Season
+    </label>
+    <label
+      class="text-white font-size-lg"
+      style="line-height: 1.5"
+      [ngStyle]="{
+        color: themeService.isDarkMode() ? '#e8732e' : '#5F21BA'
+      }"
+    >
       Join Live Stream
     </label>
   </div>
@@ -18,5 +26,12 @@
     style="max-height: 450px; max-width: 300px"
   />
 
-  <button class="hourButton">11 : 45</button>
+  <button
+    class="hourButton"
+    [ngStyle]="{
+      color: themeService.isDarkMode() ? 'var(--main-board-color)' : 'var(--letter-color)'
+    }"
+  >
+    11 : 45
+  </button>
 </div>

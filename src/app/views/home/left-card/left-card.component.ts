@@ -1,4 +1,4 @@
-import { Component, OnInit, inject} from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { Router } from '@angular/router'
 import { SignInButtonsComponent } from "../sign-in-buttons/sign-in-buttons.component";
 
@@ -10,6 +10,7 @@ import { SignInButtonsComponent } from "../sign-in-buttons/sign-in-buttons.compo
 })
 export class LeftCardComponent implements OnInit {
   router = inject(Router);
+  leftSide = signal<boolean>(false);
 
   constructor() {}
 

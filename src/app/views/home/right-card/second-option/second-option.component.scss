@@ -27,6 +27,13 @@ button {
   padding: 6px;
 }
 
+.lightBall {
+  background: #dadada;
+  color: rgb(0, 0, 0);
+  border-radius: 100%;
+  padding: 6px;
+}
+
 button img {
   height: 12px;
   width: 13px;
@@ -48,4 +55,10 @@ hr {
   background: white;
   border-radius: 8px !important;
   color: black;
+}
+
+.searchNowLighter {
+  background: #1a2028 !important;
+  border-radius: 8px !important;
+  color: white;
 }

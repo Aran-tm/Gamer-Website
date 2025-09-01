@@ -1,6 +1,7 @@
 import { IUser } from '@core/interfaces/users.interface';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, } from '@angular/core';
+import { Component, inject, OnInit, } from '@angular/core';
+import { ThemeService } from '@core/services/theme-toggle.service';
 
 @Component({
   selector: 'app-second-option',
@@ -9,6 +10,7 @@ import { Component, OnInit, } from '@angular/core';
   styleUrl: './second-option.component.scss',
 })
 export class SecondOptionComponent implements OnInit {
+  themeService = inject(ThemeService)
   users: IUser[] = [
     {
       id: 1,

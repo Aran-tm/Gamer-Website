@@ -1,5 +1,13 @@
 <!-- Sign In / Sign Up Buttons -->
-<div class="auth-buttons">
-  <button class="btn-signin" style="font-size: 10px; padding: 12px;" (click)="goToLogin()">Sign In</button>
-  <button class="btn-signup" style="font-size: 10px; padding: 12px;" (click)="goToLogin()">Create account</button>
+<div
+  class="auth-buttons" [style]="leftSide() ? 'margin-top: 50px !important;' : ''"
+>
+  <!-- Theme Mode App Button -->
+  <app-theme-toggle class="align-center" [hideThemeToggle]="leftSide()" />
+  <button class="btn-signin" style="font-size: 10px; padding: 12px" (click)="goToLogin()">
+    Sign In
+  </button>
+  <button class="btn-signup" style="font-size: 10px; padding: 12px" (click)="goToLogin()">
+    Create account
+  </button>
 </div>

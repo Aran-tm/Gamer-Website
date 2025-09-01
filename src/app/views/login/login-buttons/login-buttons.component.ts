@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ThemeService } from '@core/services/theme-toggle.service';
 
 @Component({
   selector: 'app-login-buttons',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './login-buttons.component.html',
   styleUrl: './login-buttons.component.scss',
 })
-export class LoginButtonsComponent { }
+export class LoginButtonsComponent {
+  themeService = inject(ThemeService);
+}
