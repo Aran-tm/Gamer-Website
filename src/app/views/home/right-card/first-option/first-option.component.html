@@ -1,0 +1,32 @@
+<div
+  style="margin-top: 20px; margin-bottom: 20px; display: flex; gap: 10px; flex-direction: column"
+>
+  <div style="display: flex; gap: 10px">
+    <label style="color: var(--light-tertiray-color); font-size: 20px">01.</label>
+    <span
+      class="text-white animated-underline"
+      style="display: flex; align-items: center; font-size: 16px"
+      >Choose Platform</span
+    >
+  </div>
+
+  <!-- Choose Platform -->
+  <div
+    class="flexRow"
+    style="
+      gap: 10px;
+      background: var(--primary-color);
+      border-radius: 50px;
+      padding: 6px;
+      margin-top: 10px;
+    "
+  >
+    @for (plat of platforms; track plat.id) {
+    <div class="flexRow" style="width: 33%">
+      <button (click)="isClicked(plat.id)" [ngClass]="plat.isSelected ? 'buttonBg' : 'buttonNoBg'">
+        {{ plat.name }}
+      </button>
+    </div>
+    }
+  </div>
+</div>
