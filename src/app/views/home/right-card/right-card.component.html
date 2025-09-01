@@ -1,26 +1,112 @@
-<div class="py px streaming-card text-center" style="display: flex; flex-direction: column; border-top-left-radius: 0px; border-top-right-radius: 0px; background: var(--secondary-color);">
+<div
+  class="py px streaming-card text-center"
+  style="
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background: var(--secondary-color);
+  "
+>
   <!-- First Option -->
-  <div style="margin-top: 20px; margin-bottom: 20px; display: flex; gap: 10px; flex-direction: column;">
-    <div style="display: flex; gap: 10px;">
-      <label style="color: var(--light-tertiray-color); font-size: 20px;">01.</label>
-      <span class="text-white animated-underline" style="display: flex; align-items: center; font-size: 16px;">Choose Platform</span>
+  <div
+    style="margin-top: 20px; margin-bottom: 20px; display: flex; gap: 10px; flex-direction: column"
+  >
+    <div style="display: flex; gap: 10px">
+      <label style="color: var(--light-tertiray-color); font-size: 20px">01.</label>
+      <span
+        class="text-white animated-underline"
+        style="display: flex; align-items: center; font-size: 16px"
+        >Choose Platform</span
+      >
     </div>
 
     <!-- Choose Platform -->
-    <div class="flexRow" style="gap: 10px; background: var(--primary-color); border-radius: 50px; padding: 6px; margin-top: 10px;">      
-      @for (plat of platforms; track plat.id) {        
-        <div class="flexRow" style="width: 33%">
-           <button (click)="isClicked(plat.id)" [ngClass]="plat.isSelected ? 'buttonBg' : 'buttonNoBg'">
-             {{ plat.name }}
-           </button>
-        </div>
+    <div
+      class="flexRow"
+      style="
+        gap: 10px;
+        background: var(--primary-color);
+        border-radius: 50px;
+        padding: 6px;
+        margin-top: 10px;
+      "
+    >
+      @for (plat of platforms; track plat.id) {
+      <div class="flexRow" style="width: 33%">
+        <button
+          (click)="isClicked(plat.id)"
+          [ngClass]="plat.isSelected ? 'buttonBg' : 'buttonNoBg'"
+        >
+          {{ plat.name }}
+        </button>
+      </div>
       }
     </div>
   </div>
 
   <!-- Second Option -->
-  <div style="margin-top: 20px; margin-bottom: 20px; display: flex; gap: 10px">
-    <label style="color: var(--light-tertiray-color); font-size: 20px;">02.</label>
-    <span class="text-white animated-underline" style="display: flex; align-items: center; font-size: 16px;">Searching Game</span>
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 10px;
+    "
+  >
+    <div style="display: flex; gap: 10px">
+      <label style="color: var(--light-tertiray-color); font-size: 20px">02.</label>
+      <span
+        class="text-white animated-underline"
+        style="display: flex; align-items: center; font-size: 16px"
+        >Searching Game</span
+      >
+    </div>
+
+    <div
+      class="flexRow"
+      style="
+        background: var(--primary-color);
+        border-radius: 10px;
+        padding: 6px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      "
+    >
+      <div class="justify-between" style="padding: 8px">
+        <span class="text-white align-center">COD Warzone</span>
+        <img
+          src="/assets/images/options.png"
+          style="width: 20px; height: 20px; background: var(--secondary-color)"
+        />
+      </div>
+
+      <hr
+        style="width: 100%; height: 1px; border: none; background: #393939; margin-bottom: 20px"
+      />
+
+      <!-- Users Block -->
+      <div class="displayContainer">
+        @for (user of users; track user.id) {
+        <div class="flexRow" style="gap: 10px; justify-content: space-between;">
+          <div class="flexRow" style="gap: 10px;">
+            <span class="blackBall">
+              {{ user.id }}
+            </span>
+            <span class="text-white align-center">{{ user.name }}</span>
+            <img style="width: 28px; height: 28px" [src]="user.icon" />
+          </div>
+
+          <button style="width: 30px !important; height: 30px !important; border-radius: 4px !important; background: #404145;">
+            <img src="/assets/images/plus.png" alt="">  
+          </button>
+        </div>
+        }
+      </div>
+    </div>
   </div>
 </div>

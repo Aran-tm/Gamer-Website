@@ -1,3 +1,4 @@
+import { IUser } from '@core/interfaces/users.interface';
 import { CommonModule } from '@angular/common';
 import { IPlatform } from '@core/interfaces/platforms.interface';
 import { Component, OnInit,  } from '@angular/core';
@@ -29,6 +30,29 @@ export class RightCardComponent implements OnInit {
       isSelected: false,
     },
   ];
+
+  users: IUser[] = [
+    {
+      id: 1,
+      name: 'Dr. Team',
+      icon: "/assets/images/user1.png"
+    },
+    {
+      id: 2,
+      name: 'Mia Plays',
+      icon: "/assets/images/user3.png"
+    },
+    {
+      id: 3,
+      name: 'Keoxer',
+      icon: "/assets/images/user1.png"
+    },
+    {
+      id: 4,
+      name: 'Nickmerc',
+      icon: "/assets/images/user3.png"
+    },
+  ] 
 
   constructor() {}
 
