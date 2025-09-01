@@ -2,16 +2,16 @@
   <h3 class="text-white" style="text-align: center;">Trending Categories</h3>
 
   <!-- All Categories Cards -->
-  <div class="displayContainer outlerContainer">
+  <div class="displayContainer outlerContainer" style="cursor: pointer;">
     @for (cat of categories; track cat.id) {
-    <div class="cardContainer displayContainer" style="gap: 10px; padding: 20px;">
-      <label class="text-white">
-        <span [ngClass]="cat.id === 'View All' ? 'text-secondary' : 'text-white'">
+    <div class="cardContainer displayContainer" style="gap: 10px; padding: 20px; cursor: pointer;" [style.--card-bg-image]="'url(' + cat.image + ')'">
+      <label class="text-white" style="cursor: pointer;">
+        <span [ngClass]="cat.id === 'View All' ? 'text-secondary' : 'text-white'" style="cursor: pointer;">
           {{ cat.id === 'View All' ? 'View All' : '0' }}
         </span>
         {{ cat.id === 'View All' ? '' : cat.id }}
       </label>
-      <label class="text-white">{{ cat.name }}</label>
+      <label class="text-white" style="cursor: pointer;">{{ cat.name }}</label>
 
       <svg
         xmlns="http://www.w3.org/2000/svg"
