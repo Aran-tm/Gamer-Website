@@ -1,6 +1,5 @@
 <div class="headerContainer" [class.menuOpened]="isMenuOpened()">
   <div class="header-content">
-
     <!-- Logotype -->
     <img style="width: 24px; height: 36px" src="/assets/images/logo.png" />
 
@@ -24,17 +23,37 @@
   <!-- Additional content to be displayed when the menu is open -->
   @if (isMenuOpened()) {
   <div class="menu-content">
-
     @for (option of menuOptions; track option.id) {
+    <a href="/home" class="flexRow">
+      <img style="width: 24px; height: 24px" [src]="option.image" />
+      <div class="align-center">
+        <span>{{ option.name }}</span>
+      </div>
+    </a>
+    }
+
+    <app-sign-in-buttons />
+  </div>
+  } @else {
+  <div class="menu-contentDesktop">
+    <div class="flexRow" style="gap: 40px">
+      @for (option of menuOptions; track option.id) {
       <a href="/home" class="flexRow">
-        <img style="width: 24px; height: 24px;" [src]="option.image" />
         <div class="align-center">
           <span>{{ option.name }}</span>
         </div>
       </a>
-    }
+      }
+    </div>
 
-    <app-sign-in-buttons />
+    <!-- Main Image -->
+    <div class="align-center">
+      <img class="gtaImage" src="/assets/images/logo.png" />
+    </div>
+
+    <div class="flexRow">
+      <app-sign-in-buttons />
+    </div>
   </div>
   }
 </div>

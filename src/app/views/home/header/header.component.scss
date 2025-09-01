@@ -57,7 +57,48 @@
     transition: color 0.2s ease;
 
     &:hover {
-      color: #3498db;
+      color: var(--main-board-color);
     }
   }
+}
+
+.menu-contentDesktop {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--main-board-color);
+    }
+  }
+}
+
+.gtaImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 1024PX) {
+  .menu-contentDesktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-content {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }  
 }
