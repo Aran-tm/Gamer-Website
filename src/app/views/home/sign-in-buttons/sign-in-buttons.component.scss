@@ -1,4 +1,18 @@
 
+@media screen and (max-width: 320px) {
+  button {
+    padding: 5px !important;
+    font-size: 9px !important; 
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  button {
+    padding: 6px !important;
+    font-size: 11px !important; 
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .auth-buttons {
     border-top: 0;
@@ -8,7 +22,7 @@
 
   button {
     border-radius: 50px !important;
-    font-size: 14px !important;
+    font-size: 10px !important;
     width: 140px !important;
   }
 }

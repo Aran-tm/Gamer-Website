@@ -10,6 +10,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
+        [class]="themeService.isDarkMode() ? 'icon-dark' : 'icon-light'"
       >
         <path
           stroke-linecap="round"
