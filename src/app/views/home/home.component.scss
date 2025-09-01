@@ -1,0 +1,20 @@
+.secondContainer {
+    display: flex; 
+    width: 100%; 
+    flex-direction: column;
+    margin-top: 45px;
+  }
+
+@media screen and (min-width: 1024px) {
+  .secondContainer {
+    display: flex; 
+    width: 100%; 
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;    
+  }
+
+  .container {
+    width: 33%
+  }
+}

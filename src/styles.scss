@@ -254,6 +254,13 @@
       font-size: 14px !important;
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    .streaming-card {
+      max-height: 564px;
+      height: 100%;
+    }
+  }
 }
 
 /* Custom Classes */
