@@ -50,8 +50,22 @@ hr {
   color: black;
 }
 
+
+
 @media screen and (min-width: 375px) {
   button {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .streaming-card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .streaming-card {
+    width: none;
   }
 }
