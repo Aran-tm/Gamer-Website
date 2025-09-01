@@ -1,0 +1,33 @@
+<div class="displayContainer w-full">
+  <h3 class="text-white">Trending Categories</h3>
+
+  <!-- All Categories Cards -->
+  <div class="displayContainer outlerContainer">
+    @for (cat of categories; track cat.id) {
+    <div class="cardContainer displayContainer" style="gap: 10px; padding: 20px">
+      <label class="text-white">
+        <span [ngClass]="cat.id === 'View All' ? 'text-secondary' : 'text-white'">
+          {{ cat.id === 'View All' ? 'View All' : '0' }}
+        </span>
+        {{ cat.id === 'View All' ? '' : cat.id }}
+      </label>
+      <label class="text-white">{{ cat.name }}</label>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="white"
+        style="width: 20px; height: 20px"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+        />
+      </svg>
+    </div>
+    }
+  </div>
+</div>

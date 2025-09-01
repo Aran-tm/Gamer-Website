@@ -4,10 +4,11 @@ import { Component, inject, OnInit } from '@angular/core';
 import { LeftCardComponent } from "./left-card/left-card.component";
 import { CenterCardComponent } from "./center-card/center-card.component";
 import { RightCardComponent } from "./right-card/right-card.component";
+import { TrendingCategoriesComponent } from "./trending-categories/trending-categories.component";
 
 @Component({
   selector: 'app-home',
-  imports: [HeaderComponent, LeftCardComponent, CenterCardComponent, RightCardComponent],
+  imports: [HeaderComponent, LeftCardComponent, CenterCardComponent, RightCardComponent, TrendingCategoriesComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

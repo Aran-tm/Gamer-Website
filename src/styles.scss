@@ -352,12 +352,12 @@ body {
 // scrollbar radius and bg
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: var(--letter-color);
+  background: rgb(61, 60, 60);
 }
 
 // scrollbar thin on hover
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--letter-color);
+  background: rgb(61, 60, 60);
 }
 
 @media screen and (min-width: 1024px) {

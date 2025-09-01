@@ -1,0 +1,20 @@
+.cardContainer {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(57 57 57 / 10%);
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+.text-secondary {
+  color: #737373 !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .outlerContainer {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
